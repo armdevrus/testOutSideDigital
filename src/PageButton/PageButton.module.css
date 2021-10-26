@@ -1,0 +1,262 @@
+.container__background {
+    height: 568px;
+    width: 100%;
+}
+@media screen and (min-width: 768px ) {
+    .container__background{
+        height: 1024px;
+    }
+}
+@media screen and (min-width: 1440px ) {
+    .container__background{
+        height: 800px;
+    }
+}
+.container__background_button {
+    background: linear-gradient(255.35deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #FF5E56;
+    box-shadow: 0 -0.11px 16.9495px rgba(183, 187, 225, 0.33);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button__background {
+    width: 50%;
+    height: 10%;
+    background: none;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    padding: 12px 24px;
+
+    font-family: Lab Grotesque;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: white;
+}
+
+.button__exit {
+    position: absolute;
+    right: 22px;
+    top: 22px;
+    background: center no-repeat url("./../icons/button_exit.png");
+    height: 12px;
+    width: 12px;
+    border: none;
+    padding: 15px;
+}
+
+.container__context_info {
+    display: flex;
+    flex-direction: column;
+    margin: 32px 16px 24px 16px;
+}
+
+.info__name_heading {
+    margin: 0;
+
+    font-family: Lab Grotesque;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.info__text {
+    margin-top: 16px;
+    margin-bottom: 0;
+
+    font-family: Lab Grotesque;
+    font-size: 12px;
+    font-weight: lighter;
+    line-height: 16px;
+    color: #808080;
+}
+
+.container__body{
+    flex: 1 1 auto;
+}
+
+.container__context_func {
+    margin: 0 16px 0 16px;
+    max-width: 100%;
+}
+
+.info__name_sum {
+    margin: 0;
+    font-weight: 500;
+}
+
+.info__input {
+    margin-top: 8px;
+    width: 100%;
+    border: 1px solid #DFE3E6;
+    box-sizing: border-box;
+    border-radius: 3px;
+    height: 40px;
+
+    font-family: Lab Grotesque;
+    font-weight: lighter;
+    font-size: 14px;
+    line-height: 24px;
+    text-indent: 10px;
+}
+.info__input::placeholder{
+    color: lightgray;
+}
+.button__calc {
+    border: none;
+    background: none;
+    color: red;
+    padding: 5px 0 0 0;
+
+    font-family: Lab Grotesque;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.container__context_result {
+    margin: 16px 0 0 0;
+}
+
+.info__name_result {
+    margin: 0;
+
+    font-family: Lab Grotesque;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.unordered__list {
+    list-style: none;
+    /*margin: 16px 0 24px 0;*/
+    padding: 0;
+    float: left;
+    width: 100%;
+}
+
+.unordered__list_point {
+    padding: 16px 0 16px 0;
+    position: relative;
+    width: 100%;
+}
+
+.unordered__list_point:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    background: rgba(190, 190, 190, .5);
+}
+
+.unordered__list_point:first-child {
+    padding-top: 0;
+}
+
+.unordered__list_point_checkbox_first,
+.unordered__list_point_checkbox_second,
+.unordered__list_point_checkbox_third,
+.unordered__list_point_checkbox_fourth,
+.unordered__list_point_checkbox_five{
+    z-index: -1;
+    opacity: 0;
+}
+.unordered__list_point_checkbox_first + label,
+.unordered__list_point_checkbox_second + label,
+.unordered__list_point_checkbox_third + label,
+.unordered__list_point_checkbox_fourth + label,
+.unordered__list_point_checkbox_five + label{
+    display: inline-flex;
+    /*position: relative;*/
+    cursor: pointer;
+    align-items: center;
+    margin: 0 0 0 11px ;
+}
+
+.unordered__list_point_checkbox_first + label:before,
+.unordered__list_point_checkbox_second + label:before,
+.unordered__list_point_checkbox_third + label:before,
+.unordered__list_point_checkbox_fourth + label:before,
+.unordered__list_point_checkbox_five + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    background-color: red;
+}
+
+.unordered__list_point_checkbox_first:checked + label:after,
+.unordered__list_point_checkbox_second:checked + label:after,
+.unordered__list_point_checkbox_third:checked + label:after,
+.unordered__list_point_checkbox_fourth:checked + label:after,
+.unordered__list_point_checkbox_five:checked + label:after {
+    content: '';
+    position: absolute;
+    align-items: center;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: no-repeat url("./../icons/icon_checkbox_button.png");
+    transform: translateY(5px);
+}
+.unordered__list_point_year{
+    color: black;
+    opacity: .4;
+    margin-left: 5px;
+}
+.container__context_select{
+    margin: 24px 16px 40px 16px;
+}
+.info__name_select{
+    font-family: Lab Grotesque;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+.select_radiobutton{
+    display: none;
+}
+.select_radiobutton_label_first, .select_radiobutton_label_second{
+    position: relative;
+    font-family: Lab Grotesque;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 6px 12px;
+    color: black;
+    background: lightgray;
+    border-radius: 50px;
+}
+.select_radiobutton_label_second{
+    margin-left: 12px;
+}
+.select_radiobutton:checked + .select_radiobutton_label_first,
+.select_radiobutton:checked + .select_radiobutton_label_second{
+    color: white;
+    background: linear-gradient(255.35deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #FF5E56;
+}
+.container__footer{
+    margin: 0 16px 16px 16px;
+}
+.footer_button{
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(255.35deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #FF5E56;
+    box-shadow: 0px 0px 24px rgba(234, 0, 41, 0.33);
+    border: none;
+    border-radius: 6px;
+
+    font-family: Lab Grotesque;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
