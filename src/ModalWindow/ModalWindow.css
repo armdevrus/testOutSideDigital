@@ -1,5 +1,4 @@
 .container__background_module {
-    background: rgba(0, 0, 0, 0);
     position: fixed;
     top: 0;
     left: 0;
@@ -11,52 +10,65 @@
 
 .container__background_module.active {
     background: lightgray;
-    width: 100%;
-    height: 100%;
     opacity: 1;
-    /*pointer-events: all;*/
 }
 
 @media screen and (min-width: 768px) {
     .container__background_module.active {
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 }
 
 .container__content_module {
-    background: rgba(255, 255, 255, 0);;
     position: fixed;
     width: 100%;
     height: 100%;
-    /*pointer-events: none;*/
     opacity: 0;
 }
 
 .container__content_module.active {
-    background: rgba(255, 255, 255, 1);;
-    opacity: 1;
-    pointer-events: all;
-
     display: flex;
     flex-direction: column;
+    background: rgba(255, 255, 255, 1);
+    opacity: 1;
+    pointer-events: all;
+    min-height: 100%;
+    overflow-y: auto;
 }
+.container__content_module.active::-webkit-scrollbar{
+    width: 25px;
+}
+.container__content_module.active::-webkit-scrollbar-track{
+    background: linear-gradient(255.35deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #FF5E56;
+    border-radius: 0;
+}
+.container__content_module.active::-webkit-scrollbar-thumb{
+    background-color: grey;
+    border-radius: 0;
+}
+
 
 @media screen and (min-width: 768px) {
     .container__content_module.active {
-        margin-top: 120px;
         max-width: 50%;
-        max-height: 768px;
         border-radius: 30px;
-        padding: 20px;
+        padding: 0 10px 10px 10px ;
+        min-height: 60%;
     }
+    .container__content_module.active::-webkit-scrollbar-track{
+        background: linear-gradient(255.35deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #FF5E56;
+        border-radius: 0 30px 30px 0;
+    }
+    .container__content_module.active::-webkit-scrollbar-thumb{
+        background-color: grey;
+        border-radius: 0 30px 30px 0;
+    }
+
 }
 @media screen and (min-width: 1440px) {
     .container__content_module.active {
-        margin-top: 120px;
         max-width: 70%;
-        max-height: 768px;
-        border-radius: 30px;
-        padding: 20px;
     }
 }

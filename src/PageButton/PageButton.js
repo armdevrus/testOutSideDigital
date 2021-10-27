@@ -14,7 +14,7 @@ const PageButton = () => {
     let sum = parseInt(inputValue * 12 * 13/100)
 
     const handleOnClickCount = () => {
-        setIsVisibility(false)
+        setIsVisibility(isVisibility ? false : true)
     }
 
 
@@ -22,7 +22,7 @@ const PageButton = () => {
         <div className={styles.container__background}>
             <div className={styles.container__background_button}>
                 <button className={styles.button__background}
-                        onClick={() => setIsModalActive(true)}
+                        onClick={() => {setIsModalActive(true); setInputValue('')}}
                 >Налоговый вычет</button>
             </div>
             <ModalWindow isModalActive={isModalActive} isVisibility={isVisibility}>
